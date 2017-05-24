@@ -1,0 +1,72 @@
+--------------------------------------------------- RESEARCH NOTE --------------------------------------------------- 
+date: 05.22.2017
+
+Can we consider file name as feature?
+
+No. We collected videos from different sources. Not all sources follow same file naming convention. While file names like
+"bs-apr3-rigged-retirement-2016-05-09-23-13-51-030" includes the original file name, file names like 'PolAd_BernieSanders_q6i54' 
+does not.
+But file name can help us class classify "political non-campaign ads" e.g ads for the shows like CNN's election night coverage or Trevor Noah show.
+As this ads will contain show name as part of file name most of the times.
+
+----------------------
+Proving a hypothesis:||
+----------------------
+-------------
+Hypothesis:|| 
+-------------
+In case of political ads video frames will contain text mostly at the begining or end of the video
+
+-------------
+Experiment:||
+-------------
+
+We splitted the video frames into quartiles and into 10 groups.
+
+quartiles approach: 
+If the video length is 31 seconds, video frames will be divided in 4 groups of 8,8,8,7 frames respectively.
+
+10 group approach: 
+If the video length is 31 seconds, video frames will be divided in 10 groups of 3,3,3,3,3,3,3,3,3,4 frames respectively.
+
+For quartile approach we observed the following observation:
+
+Q1 i.e. first quarter of a collection of 846 political video contains only 66% of frames with text data.
+Q2 i.e. second quarter of a collection of 846 political video contains only 71% of frames with text data.
+Q3 i.e. third quarter of a collection of 846 political video contains only 72% of frames with text data.
+Q4 i.e. fourth quarter of a collection of 846 political video contains 84% of frames with text data.
+
+
+Therefore the hypothesis that we assumed from manually observing the dataset, is partially proven correct. As the 4th quarter contains more text
+data than other 3 quarters. We can not prove if the frames at the begining of the videos contains more textual information with this method.
+
+For 10 group approach we observed the following observation:
+
+---------------------------------------------------------------------
+bucket number        |       percentage of the frames containing text
+---------------------------------------------------------------------
+b1                   |       56%
+b2                   |       73%
+b3                   |       71%
+b4                   |       71%
+b5                   |       72%
+b6                   |       72%
+b7                   |       72%
+b8                   |       70%
+b9                   |       72%
+b10                  |       88%
+----------------------------------------------------------------------
+
+Once again we can see the last 10% timeframes of all the political ad campaign videos has highest concentration of textual information.
+The beginning 10% timeframes have actually least concentration of textual information.
+
+We can explain the low concentration of textual information in the beginning 10% or 25%:
+1. Videos sometimes contains one or two blank frames at the beginning, which contributes to the low concentration of textual information.
+2. We need to identify some certain texts in these video frames instead of looking for every texts. Because certain words has higher importance in
+determining if a video ad is a political campaign ad or not.
+
+------
+next ||
+------
+Check percentage of frames containing most informative text information 
+          
